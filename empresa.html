@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Empresa - Alvant Holding</title>
+    <meta name="description" content="Conheça a história e os valores da Alvant.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Alvant Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-text" style="display:none;">ALVANT</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="empresa.html" class="active">A Empresa</a>
+                <a href="produtos.html">Produtos e Soluções</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html" class="btn-primary-sm">Contato</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html">Início</a>
+            <a href="empresa.html" class="active">A Empresa</a>
+            <a href="produtos.html">Produtos e Soluções</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html" class="btn-primary-sm">Contato</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal">
+            <h1 class="page-title">Sobre a <span class="text-gradient">Alvant</span></h1>
+            <p class="section-subtitle-center">Engenharia, Inovação e Resultados consolidados em uma Holding.</p>
+        </div>
+    </section>
+
+    <!-- Empresa Section -->
+    <section class="empresa section-padding">
+        <div class="container">
+            <div class="empresa-grid">
+                <div class="empresa-visual reveal-left">
+                    <div class="image-wrapper glass-border">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" alt="Escritório corporativo" class="empresa-img">
+                        <div class="experience-badge">
+                            <span class="number">+10</span>
+                            <span class="text">Anos de<br>Experiência</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="empresa-content reveal-right">
+                    <h2 class="section-title">Nossa <span class="text-gradient">História</span></h2>
+                    <p>A Alvant nasceu da necessidade do mercado corporativo em ter um parceiro tecnológico de ponta a ponta. Como holding, não apenas prestamos serviços, mas estruturamos negócios e impulsionamos inovações tecnológicas de maneira sistêmica.</p>
+                    <p>Ao longo da nossa trajetória, consolidamos expertise no desenvolvimento de arquiteturas de software complexas e na sustentação de infraestruturas cloud de missão crítica, sempre com um único objetivo: entregar resultados tangíveis para nossos clientes e parceiros.</p>
+                    
+                    <ul class="features-list">
+                        <li><i data-lucide="check-circle" class="icon-accent"></i> Foco inabalável na qualidade da engenharia.</li>
+                        <li><i data-lucide="check-circle" class="icon-accent"></i> Transparência e governança corporativa.</li>
+                        <li><i data-lucide="check-circle" class="icon-accent"></i> Equipe formada pelos melhores especialistas do mercado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Nossa <span class="text-gradient">Evolução</span></h2>
+                <p class="section-subtitle-center">Os marcos que definiram a construção da Alvant Holding.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">O Início</span>
+                        <h3>Fundação</h3>
+                        <p>Início das operações focadas em desenvolvimento de software e pequenas infraestruturas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal-right delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Expansão Cloud</span>
+                        <h3>Divisão de Infraestrutura</h3>
+                        <p>Criação do braço de infraestrutura e serviços em nuvem (AWS, Azure).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal-left delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Estruturação Holding</span>
+                        <h3>Formação da Alvant Holding</h3>
+                        <p>Agrupamento das unidades de negócios, criando um ecossistema completo de tecnologia.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal-right delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Presente</span>
+                        <h3>Inovação Contínua</h3>
+                        <p>Lançamento de produtos SaaS próprios e expansão das consultorias corporativas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">ALVANT</span>
+                </div>
+                <p>Engenharia, Inovação e Resultados. Construindo o futuro da tecnologia corporativa.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="index.html">Início</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="produtos.html">Produtos e Soluções</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Alvant Holding. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

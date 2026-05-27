@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos e Soluções - Alvant Holding</title>
+    <meta name="description" content="Conheça nosso catálogo de soluções em software, infraestrutura e consultoria.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Alvant Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-text" style="display:none;">ALVANT</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="produtos.html" class="active">Produtos e Soluções</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html" class="btn-primary-sm">Contato</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html">Início</a>
+            <a href="empresa.html">A Empresa</a>
+            <a href="produtos.html" class="active">Produtos e Soluções</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html" class="btn-primary-sm">Contato</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal">
+            <h1 class="page-title">Nossas <span class="text-gradient">Soluções</span></h1>
+            <p class="section-subtitle-center">Um ecossistema completo de tecnologia desenhado para resolver os maiores desafios corporativos.</p>
+        </div>
+    </section>
+
+    <!-- Soluções Detalhadas -->
+    <section class="solucoes section-padding">
+        <div class="container">
+            <!-- Categoria 1: Desenvolvimento -->
+            <div class="mb-6 reveal">
+                <h2 class="section-title text-gradient">Desenvolvimento de Software</h2>
+                <p class="text-secondary mb-4">Engenharia de software sob medida, focada em performance e escalabilidade.</p>
+                <div class="cards-grid">
+                    <div class="solucao-card glass-card">
+                        <div class="card-icon"><i data-lucide="monitor-smartphone"></i></div>
+                        <h3>Aplicações Web & Mobile</h3>
+                        <p>Desenvolvemos sistemas corporativos completos, desde o back-end robusto até o front-end intuitivo para usuários finais e colaboradores.</p>
+                    </div>
+                    <div class="solucao-card glass-card">
+                        <div class="card-icon"><i data-lucide="database"></i></div>
+                        <h3>Arquitetura de Dados</h3>
+                        <p>Estruturação de bancos de dados relacionais e NoSQL de alta performance para suportar milhões de transações diárias.</p>
+                    </div>
+                    <div class="solucao-card glass-card">
+                        <div class="card-icon"><i data-lucide="network"></i></div>
+                        <h3>Integrações e APIs</h3>
+                        <p>Conectamos seus sistemas legados a novas plataformas construindo APIs seguras e eficientes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 2: Infraestrutura -->
+            <div class="mb-6 mt-6 reveal" style="padding-top: 4rem;">
+                <h2 class="section-title text-gradient">Infraestrutura e Cloud</h2>
+                <p class="text-secondary mb-4">A base sólida que garante a continuidade do seu negócio 24/7.</p>
+                <div class="cards-grid">
+                    <div class="solucao-card glass-card">
+                        <div class="card-icon"><i data-lucide="cloud"></i></div>
+                        <h3>Migração e Gestão Cloud</h3>
+                        <p>Especialistas em AWS, Azure e Google Cloud. Migramos suas operações com Zero Downtime e otimizamos custos.</p>
+                    </div>
+                    <div class="solucao-card glass-card">
+                        <div class="card-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Cybersecurity</h3>
+                        <p>Auditorias de segurança, testes de intrusão, proteção contra DDoS e implementação de políticas zero-trust.</p>
+                    </div>
+                    <div class="solucao-card glass-card">
+                        <div class="card-icon"><i data-lucide="server-cog"></i></div>
+                        <h3>DevOps & SRE</h3>
+                        <p>Automação completa de infraestrutura (IaC), pipelines de CI/CD e monitoramento proativo para evitar falhas.</p>
+                    </div>
+                    <div class="solucao-card glass-card">
+                        <div class="card-icon"><i data-lucide="wifi"></i></div>
+                        <h3>Consultoria e Infra em Redes</h3>
+                        <p>Projetamos e implementamos arquiteturas de redes corporativas robustas, garantindo conectividade, alta performance e segurança em todos os níveis da sua operação.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria 3: Produtos SaaS -->
+            <div class="mt-6 reveal" style="padding-top: 4rem;">
+                <h2 class="section-title text-gradient">Produtos Alvant</h2>
+                <p class="text-secondary mb-4">Softwares SaaS proprietários construídos com a qualidade e padrão da holding.</p>
+                <div class="portfolio-grid">
+                    <a href="operix.html" class="portfolio-card glass-border" style="text-decoration: none; display: block;">
+                        <img src="assets/images/operix-app.png" alt="Painel Operix" class="portfolio-img" style="height: 250px; object-position: top; object-fit: cover; background: #0B1121;" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800'">
+                        <div class="portfolio-overlay" style="opacity: 1; transform: translateY(0); background: linear-gradient(to top, rgba(11, 17, 33, 1) 10%, rgba(11, 17, 33, 0.8) 60%, transparent);">
+                            <span class="text-gradient font-bold" style="font-weight: 800; font-family: var(--font-heading); font-size: 1.5rem;">Operix</span>
+                            <h3 class="mt-2 mb-2 text-primary" style="color: white;">Gestão de Ativos e OS</h3>
+                            <p class="text-secondary" style="font-size: 0.9rem;">Plataforma completa para gestão de ativos corporativos, controle de manutenções e chamados.</p>
+                            <span class="btn-link mt-4" style="color: white;">Acessar detalhes <i data-lucide="arrow-right" class="icon-sm"></i></span>
+                        </div>
+                    </a>
+                    
+                    <a href="zeppe.html" class="portfolio-card glass-border delay-1" style="text-decoration: none; display: block;">
+                        <img src="assets/images/zeppe-app.png" alt="App Zeppe" class="portfolio-img" style="height: 250px; object-position: top; object-fit: cover; background: #F8FAFC;" onerror="this.src='https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&q=80&w=800'">
+                        <div class="portfolio-overlay" style="opacity: 1; transform: translateY(0); background: linear-gradient(to top, rgba(11, 17, 33, 1) 10%, rgba(11, 17, 33, 0.8) 60%, transparent);">
+                            <span class="text-gradient font-bold" style="font-weight: 800; font-family: var(--font-heading); font-size: 1.5rem;">Zeppe</span>
+                            <h3 class="mt-2 mb-2 text-primary" style="color: white;">Controle de Acessos</h3>
+                            <p class="text-secondary" style="font-size: 0.9rem;">Sistema inteligente e seguro para o controle de acessos em condomínios e portarias.</p>
+                            <span class="btn-link mt-4" style="color: white;">Acessar detalhes <i data-lucide="arrow-right" class="icon-sm"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">ALVANT</span>
+                </div>
+                <p>Engenharia, Inovação e Resultados. Construindo o futuro da tecnologia corporativa.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="index.html">Início</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="produtos.html">Produtos e Soluções</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Alvant Holding. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

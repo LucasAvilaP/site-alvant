@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeppe - Controle de Acesso Seguro | Alvant</title>
+    <meta name="description" content="Sistema inteligente para controle de acessos em condomínios e empresas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header" class="scrolled">
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Alvant Logo" class="logo-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-text" style="display:none;">ALVANT</span>
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Voltar para Produtos</a>
+                <a href="#contato-zeppe" class="btn-primary-sm">Solicitar Demo</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Voltar para Produtos</a>
+            <a href="#contato-zeppe" class="btn-primary-sm">Solicitar Demo</a>
+        </div>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="section-padding"
+        style="padding-top: 10rem; background: radial-gradient(circle at top, rgba(14, 165, 233, 0.1) 0%, var(--bg-main) 70%);">
+        <div class="container text-center reveal">
+            <h1 class="page-title" style="font-size: 4rem;"><span class="text-gradient">Zeppe</span></h1>
+            <p class="section-subtitle-center" style="font-size: 1.2rem; max-width: 800px;">
+                A revolução PWA (Web App) que transforma o seu smartphone em um interfone digital. Sem downloads demorados, totalmente compliance com a LGPD e desenhado para moradores, visitantes e administradores de condomínios.
+            </p>
+
+            <div class="mt-6 mb-6">
+                <img src="assets/images/zeppe-app.png" alt="Tela Inicial do Zeppe"
+                    style="width: 100%; max-width: 1000px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid var(--glass-border); background: #F8FAFC;"
+                    onerror="this.src='https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&q=80&w=1200'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios e Funcionalidades -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">O Fim do Interfone <span class="text-gradient">Físico</span></h2>
+                <p class="section-subtitle-center">Conheça as três visões de uso que tornam o Zeppe a melhor plataforma de acesso.</p>
+            </div>
+
+            <div class="cards-grid mb-6">
+                <div class="solucao-card glass-card reveal">
+                    <div class="card-icon"><i data-lucide="scan-face"></i></div>
+                    <h3>Para o Visitante</h3>
+                    <p>Ao chegar na portaria, o visitante não precisa baixar nada. Ele aponta a câmera para o "QR Code Mágico", a plataforma abre no navegador e ele escolhe como contatar o morador: Interfone em Vídeo, Chat ou WhatsApp.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-1">
+                    <div class="card-icon"><i data-lucide="home"></i></div>
+                    <h3>Para o Morador</h3>
+                    <p>O morador adiciona o PWA à sua tela inicial e recebe notificações push em segundo plano. Ele atende chamadas em tempo real via WebRTC e abre o portão diretamente pelo celular, de onde estiver.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-2">
+                    <div class="card-icon"><i data-lucide="layout-dashboard"></i></div>
+                    <h3>Para o Síndico / Admin</h3>
+                    <p>Um centro de comando completo. O síndico cadastra moradores, monitora estatísticas de acesso, controla abusos e gera os QR Codes únicos em PDF para colar na portaria de cada bloco.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="solucao-card glass-card reveal">
+                    <div class="card-icon"><i data-lucide="smartphone"></i></div>
+                    <h3>Tecnologia PWA Web App</h3>
+                    <p>Acesse o sistema inteiro via link, seja no Safari (iPhone) ou Chrome (Android). O sistema se comporta como um aplicativo nativo sem ocupar a memória do dispositivo e sem depender da App Store.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-1">
+                    <div class="card-icon"><i data-lucide="video"></i></div>
+                    <h3>Sala de Comunicação Zeppe</h3>
+                    <p>Muito além da voz. A sala virtual do Zeppe permite comunicação direta por áudio, vídeo e chat de texto instantâneo entre o morador e quem está esperando na porta.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-2">
+                    <div class="card-icon"><i data-lucide="wrench"></i></div>
+                    <h3>Fim da Manutenção Física</h3>
+                    <p>Esqueça os custos com fiação rompida, tubulações antigas e aparelhos de interfone quebrados. Toda a comunicação do Zeppe ocorre na nuvem, usando os smartphones que as pessoas já possuem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Específico -->
+    <section id="contato-zeppe" class="contato section-padding">
+        <div class="container">
+            <div class="contato-wrapper glass-card reveal"
+                style="max-width: 900px; margin: 0 auto; grid-template-columns: 1fr;">
+                <div class="contato-info text-center" style="padding: 3rem;">
+                    <h2>Traga o <span class="text-gradient">Zeppe</span> para sua Portaria</h2>
+                    <p>Pronto para modernizar o controle de acessos? Solicite um orçamento ou uma demonstração guiada do
+                        nosso sistema.</p>
+                </div>
+                <div class="contato-form" style="padding: 3rem; background: transparent;">
+                    <form id="contactForm">
+                        <div class="form-group" style="display: none;">
+                            <input type="text" id="produto" value="Zeppe Demo Request">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nome do Síndico ou Gestor</label>
+                            <input type="text" id="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="condominio">Nome do Condomínio / Empresa</label>
+                            <input type="text" id="condominio" placeholder="Onde o Zeppe será instalado?" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Solicitar Demonstração <i
+                                data-lucide="send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year"></span> Alvant Holding - Zeppe Access Control.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

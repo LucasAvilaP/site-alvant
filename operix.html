@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operix - Gestão de Ativos e OS | Alvant</title>
+    <meta name="description" content="Plataforma de gestão de ativos e ordens de serviço corporativas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header" class="scrolled">
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Alvant Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-text" style="display:none;">ALVANT</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Voltar para Produtos</a>
+                <a href="#contato-operix" class="btn-primary-sm">Solicitar Demo</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Voltar para Produtos</a>
+            <a href="#contato-operix" class="btn-primary-sm">Solicitar Demo</a>
+        </div>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="section-padding" style="padding-top: 10rem; background: radial-gradient(circle at top, rgba(0, 240, 255, 0.1) 0%, var(--bg-main) 70%);">
+        <div class="container text-center reveal">
+            <h1 class="page-title" style="font-size: 4rem;"><span class="text-gradient">Operix</span></h1>
+            <p class="section-subtitle-center" style="font-size: 1.2rem; max-width: 800px;">
+                Um CMMS (Sistema de Gestão de Manutenção Computadorizado) SaaS inovador. Projetado para empresas, indústrias, condomínios, hospitais e hotéis que precisam de controle rigoroso de compliance, validades e facilidade na abertura de chamados.
+            </p>
+            
+            <div class="mt-6 mb-6">
+                <img src="assets/images/operix-app.png" alt="Dashboard do Operix" style="width: 100%; max-width: 1000px; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid var(--glass-border);" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios e Fluxos -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">O Fim da Fricção na <span class="text-gradient">Manutenção</span></h2>
+                <p class="section-subtitle-center">Como o Operix conecta quem relata o problema com quem resolve, em segundos.</p>
+            </div>
+            
+            <div class="cards-grid mb-6">
+                <div class="solucao-card glass-card reveal">
+                    <div class="card-icon"><i data-lucide="qr-code"></i></div>
+                    <h3>Abertura Pública via QR Code</h3>
+                    <p>Moradores, funcionários ou passantes não precisam de app! Ao escanear o QR Code no equipamento, uma página web exibe o status de compliance e permite a abertura imediata de chamados técnicos.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-1">
+                    <div class="card-icon"><i data-lucide="shield-alert"></i></div>
+                    <h3>Motor de Compliance 24/7</h3>
+                    <p>Abandone as planilhas. Nosso motor varre diariamente os dados e emite alertas automáticos antes do vencimento de recargas (extintores), testes hidrostáticos ou manutenções preventivas.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-2">
+                    <div class="card-icon"><i data-lucide="scan-line"></i></div>
+                    <h3>O "Truque" da Leitura Logada</h3>
+                    <p>Para o técnico logado, o mesmo QR Code age diferente. Ele funciona como um atalho mágico: escaneie e o sistema pula a página pública, abrindo a tela gerencial de edição daquele equipamento.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="solucao-card glass-card reveal">
+                    <div class="card-icon"><i data-lucide="layers"></i></div>
+                    <h3>Acesso Multi-Ambiente</h3>
+                    <p>Ideal para prestadores de serviço e síndicos profissionais. Ao fazer login, selecione o ambiente desejado. O isolamento de dados é completo, garantindo segurança e foco em um cliente por vez.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-1">
+                    <div class="card-icon"><i data-lucide="layout-dashboard"></i></div>
+                    <h3>Dashboard em Tempo Real</h3>
+                    <p>Métricas operacionais puras. Visualize máquinas paradas, ativos totais e acompanhe o funil das Ordens de Serviço (OS) desde a abertura até a conclusão do reparo.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-2">
+                    <div class="card-icon"><i data-lucide="zap"></i></div>
+                    <h3>Para Qualquer Segmento</h3>
+                    <p>A arquitetura flexível do Operix permite o uso em escritórios, indústrias, parques e praças públicas. Onde há um equipamento precisando de controle, o Operix opera com excelência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Específico -->
+    <section id="contato-operix" class="contato section-padding">
+        <div class="container">
+            <div class="contato-wrapper glass-card reveal" style="max-width: 900px; margin: 0 auto; grid-template-columns: 1fr;">
+                <div class="contato-info text-center" style="padding: 3rem;">
+                    <h2>Agende uma <span class="text-gradient">Demonstração do Operix</span></h2>
+                    <p>Descubra como o Operix pode reduzir os custos de manutenção da sua empresa e aumentar o tempo de máquina rodando.</p>
+                </div>
+                <div class="contato-form" style="padding: 3rem; background: transparent;">
+                    <form id="contactForm">
+                        <div class="form-group" style="display: none;">
+                            <input type="text" id="produto" value="Operix Demo Request">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail Corporativo</label>
+                            <input type="email" id="email" placeholder="seu@email.com.br" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa e Cargo</label>
+                            <input type="text" id="empresa" placeholder="Ex: Gestor de Manutenção na Empresa X" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Solicitar Contato Especializado <i data-lucide="send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year"></span> Alvant Holding - Operix Software.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

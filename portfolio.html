@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Alvant Holding</title>
+    <meta name="description" content="Cases de sucesso e stack tecnológica da Alvant Holding.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Alvant Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-text" style="display:none;">ALVANT</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="produtos.html">Produtos e Soluções</a>
+                <a href="portfolio.html" class="active">Portfólio</a>
+                <a href="contato.html" class="btn-primary-sm">Contato</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html">Início</a>
+            <a href="empresa.html">A Empresa</a>
+            <a href="produtos.html">Produtos e Soluções</a>
+            <a href="portfolio.html" class="active">Portfólio</a>
+            <a href="contato.html" class="btn-primary-sm">Contato</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal">
+            <h1 class="page-title">Nosso <span class="text-gradient">Impacto</span></h1>
+            <p class="section-subtitle-center">Tecnologias que dominamos e negócios que transformamos.</p>
+        </div>
+    </section>
+
+    <!-- Cases de Sucesso -->
+    <section class="portfolio section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Cases de <span class="text-gradient">Sucesso</span></h2>
+                <p class="section-subtitle-center">Aplicações reais da engenharia Alvant gerando resultados no mundo corporativo.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Case 1 -->
+                <div class="portfolio-card glass-border reveal">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Dashboard Corporativo" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="text-gradient font-bold">Fintech</span>
+                        <h3 class="mt-2 mb-2">Modernização de Core Bancário</h3>
+                        <p class="text-secondary" style="font-size: 0.9rem;">Migração de banco de dados monolítico para microsserviços cloud native.</p>
+                    </div>
+                </div>
+                <!-- Case 2 -->
+                <div class="portfolio-card glass-border reveal delay-1">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800" alt="Servidores Cloud" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="text-gradient font-bold">Infraestrutura</span>
+                        <h3 class="mt-2 mb-2">Sustentação High-Availability</h3>
+                        <p class="text-secondary" style="font-size: 0.9rem;">Implementação de arquitetura multi-região na AWS suportando 5M+ acessos/dia.</p>
+                    </div>
+                </div>
+                <!-- Case 3 -->
+                <div class="portfolio-card glass-border reveal delay-2">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Análise de Dados" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="text-gradient font-bold">Logística</span>
+                        <h3 class="mt-2 mb-2">Plataforma de Roteirização AI</h3>
+                        <p class="text-secondary" style="font-size: 0.9rem;">Desenvolvimento de algoritmo preditivo em Python integrado a app mobile React Native.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Tecnológica -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container text-center">
+            <h2 class="section-title reveal">Stack <span class="text-gradient">Tecnológica</span></h2>
+            <p class="section-subtitle-center reveal">As principais ferramentas e linguagens utilizadas pela nossa equipe de engenharia.</p>
+            
+            <div class="stack-grid reveal delay-1">
+                <div class="stack-item"><i data-lucide="file-json"></i><span>JavaScript/TS</span></div>
+                <div class="stack-item"><i data-lucide="blocks"></i><span>React/Next.js</span></div>
+                <div class="stack-item"><i data-lucide="database"></i><span>PostgreSQL</span></div>
+                <div class="stack-item"><i data-lucide="code-2"></i><span>Python/Django</span></div>
+                <div class="stack-item"><i data-lucide="cloud"></i><span>AWS Cloud</span></div>
+                <div class="stack-item"><i data-lucide="container"></i><span>Docker/K8s</span></div>
+                <div class="stack-item"><i data-lucide="github"></i><span>CI/CD</span></div>
+                <div class="stack-item"><i data-lucide="smartphone"></i><span>React Native</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">ALVANT</span>
+                </div>
+                <p>Engenharia, Inovação e Resultados. Construindo o futuro da tecnologia corporativa.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="index.html">Início</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="produtos.html">Produtos e Soluções</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-social">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Alvant Holding. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
