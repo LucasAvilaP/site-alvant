@@ -54,7 +54,7 @@ window.addEventListener('scroll', reveal);
 // Trigger reveal on load
 reveal();
 
-// Form Submission (Simulation)
+// Form Submission & Redirection to contato@alvant.com.br
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -63,13 +63,31 @@ if (contactForm) {
         const btn = contactForm.querySelector('button');
         const originalText = btn.innerHTML;
         
+        const name = document.getElementById('name') ? document.getElementById('name').value : '';
+        const userEmail = document.getElementById('email') ? document.getElementById('email').value : '';
+        const produto = document.getElementById('produto') ? document.getElementById('produto').value : '';
+        const assunto = document.getElementById('assunto') ? document.getElementById('assunto').value : (produto || 'Contato via Site Alvant');
+        const mensagem = document.getElementById('message') ? document.getElementById('message').value : (document.getElementById('empresa') ? `Empresa/Detalhamento: ${document.getElementById('empresa').value}` : '');
+        
         // Simulating loading state
         btn.innerHTML = 'Enviando... <i data-lucide="loader-2" class="spin"></i>';
         lucide.createIcons();
         btn.disabled = true;
         
+        // Construct mailto link to contato@alvant.com.br
+        const mailtoSubject = encodeURIComponent(`[Contato Site Alvant] ${assunto}`);
+        const mailtoBody = encodeURIComponent(
+            `Nome: ${name}\n` +
+            `E-mail de Contato: ${userEmail}\n` +
+            `Assunto/Produto: ${assunto}\n\n` +
+            `Mensagem / Detalhes:\n${mensagem}`
+        );
+        
         setTimeout(() => {
-            btn.innerHTML = 'Mensagem Enviada! <i data-lucide="check"></i>';
+            // Trigger mailto client to contato@alvant.com.br
+            window.location.href = `mailto:contato@alvant.com.br?subject=${mailtoSubject}&body=${mailtoBody}`;
+            
+            btn.innerHTML = 'Solicitação Enviada! <i data-lucide="check"></i>';
             btn.style.background = '#27c93f';
             lucide.createIcons();
             
@@ -80,8 +98,8 @@ if (contactForm) {
                 btn.style.background = '';
                 btn.disabled = false;
                 lucide.createIcons();
-            }, 3000);
-        }, 1500);
+            }, 4000);
+        }, 1200);
     });
 }
 
