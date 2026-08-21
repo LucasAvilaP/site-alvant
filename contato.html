@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Alvant Holding</title>
-    <meta name="description" content="Fale com os especialistas da Alvant.">
+    <title>Contato - Alvant Tecnologia</title>
+    <meta name="description" content="Fale com os especialistas e consultores da Alvant Tecnologia.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 <body>
 
     <!-- Header / Navbar -->
-    <header id="header">
+    <header id="header" class="scrolled">
         <div class="container navbar">
             <div class="logo-container">
                 <a href="index.html" class="logo">
@@ -31,7 +31,7 @@
                 <a href="empresa.html">A Empresa</a>
                 <a href="produtos.html">Produtos e Soluções</a>
                 <a href="portfolio.html">Portfólio</a>
-                <a href="contato.html" class="btn-primary-sm">Contato</a>
+                <a href="contato.html" class="active btn-primary-sm">Contato</a>
             </nav>
 
             <button class="mobile-menu-btn" id="mobile-menu-btn">
@@ -45,7 +45,7 @@
             <a href="empresa.html">A Empresa</a>
             <a href="produtos.html">Produtos e Soluções</a>
             <a href="portfolio.html">Portfólio</a>
-            <a href="contato.html" class="btn-primary-sm">Contato</a>
+            <a href="contato.html" class="active btn-primary-sm">Contato</a>
         </div>
     </header>
 
@@ -53,51 +53,67 @@
     <section class="page-header">
         <div class="container reveal">
             <h1 class="page-title">Fale com a <span class="text-gradient">Alvant</span></h1>
-            <p class="section-subtitle-center">Estamos prontos para entender seu desafio e propor a melhor arquitetura para o seu negócio.</p>
+            <p class="section-subtitle-center">Estamos prontos para atender sua demanda corporativa e propor a melhor solução tecnológica para o seu negócio.</p>
         </div>
     </section>
 
-    <!-- Contato Section (Reaproveitando e expandindo a classe anterior) -->
-    <section class="contato section-padding">
+    <!-- Contato Section -->
+    <section class="contato section-padding" style="padding-top: 2rem;">
         <div class="container">
             <div class="contato-wrapper glass-card reveal">
+                <!-- Coluna Esquerda: Canais de Atendimento -->
                 <div class="contato-info">
-                    <h2>Nossos <span class="text-gradient">Canais</span></h2>
-                    <p>Entre em contato direto com nossos consultores de vendas ou suporte técnico.</p>
+                    <h2 style="font-size: 2rem; margin-bottom: 0.75rem;">Nossos <span class="text-gradient">Canais</span></h2>
+                    <p class="text-secondary" style="margin-bottom: 2.5rem;">Entre em contato direto com nossos consultores de soluções ou suporte técnico.</p>
                     
                     <div class="contact-methods">
                         <div class="method">
-                            <i data-lucide="mail"></i>
+                            <div class="card-icon" style="width: 48px; height: 48px; min-width: 48px; margin-bottom: 0;">
+                                <i data-lucide="mail"></i>
+                            </div>
                             <div>
-                                <h4>Parcerias e Vendas</h4>
-                                <p>comercial@alvant.com.br</p>
+                                <h4>E-mail Oficial</h4>
+                                <p>alvant.oficial@gmail.com<br>comercial@alvant.com.br</p>
                             </div>
                         </div>
+
                         <div class="method">
-                            <i data-lucide="headphones"></i>
+                            <div class="card-icon" style="width: 48px; height: 48px; min-width: 48px; margin-bottom: 0;">
+                                <i data-lucide="phone"></i>
+                            </div>
                             <div>
-                                <h4>Suporte Técnico</h4>
-                                <p>suporte@alvant.com.br</p>
+                                <h4>Telefone / WhatsApp</h4>
+                                <p>(41) 9788-0145</p>
                             </div>
                         </div>
+
                         <div class="method">
-                            <i data-lucide="phone"></i>
+                            <div class="card-icon" style="width: 48px; height: 48px; min-width: 48px; margin-bottom: 0;">
+                                <i data-lucide="map-pin"></i>
+                            </div>
                             <div>
-                                <h4>Telefone (Sede)</h4>
-                                <p>+55 (11) 4000-0000</p>
+                                <h4>Sede Corporativa (São Paulo)</h4>
+                                <p>Rua Pais Leme, 215 - Conj. 1713<br>Pinheiros, São Paulo/SP - CEP 05424-150</p>
                             </div>
                         </div>
+
                         <div class="method">
-                            <i data-lucide="map-pin"></i>
+                            <div class="card-icon" style="width: 48px; height: 48px; min-width: 48px; margin-bottom: 0;">
+                                <i data-lucide="building-2"></i>
+                            </div>
                             <div>
-                                <h4>Endereço Corporativo</h4>
-                                <p>Av. Paulista, 1000 - Bela Vista<br>São Paulo, SP - CEP 01310-100</p>
+                                <h4>Dados Fiscais</h4>
+                                <p><strong>ALVANT TECNOLOGIA LTDA</strong><br>CNPJ: 68.635.495/0001-69</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Coluna Direita: Formulário de Mensagem -->
                 <div class="contato-form">
-                    <h3 class="mb-6">Envie uma mensagem</h3>
+                    <h3 class="mb-4" style="font-size: 1.75rem;">Envie uma <span class="text-gradient">Mensagem</span></h3>
+                    <p class="text-secondary mb-6" style="font-size: 0.95rem;">Preencha o formulário abaixo e nossa equipe entrará em contato em até 24 horas úteis.</p>
+                    
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Nome Completo</label>
@@ -108,27 +124,21 @@
                             <input type="email" id="email" placeholder="nome@suaempresa.com.br" required>
                         </div>
                         <div class="form-group">
-                            <label for="assunto">Assunto</label>
-                            <input type="text" id="assunto" placeholder="Ex: Projeto de Software, Migração Cloud..." required>
+                            <label for="assunto">Assunto / Solução de Interesse</label>
+                            <input type="text" id="assunto" placeholder="Ex: Roteirização Logmap, Operix CMMS, Zeppe, Consultoria..." required>
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" rows="5" placeholder="Detalhe um pouco sobre o seu desafio..." required></textarea>
+                            <textarea id="message" rows="4" placeholder="Descreva sucintamente sua necessidade ou desafio..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary w-full">Solicitar Contato <i data-lucide="send"></i></button>
+                        <button type="submit" class="btn btn-primary w-full" style="padding: 1rem;">Solicitar Atendimento <i data-lucide="send"></i></button>
                     </form>
                 </div>
             </div>
             
-            <!-- Mapa Placeholder (Pode ser substituido por um iframe do Google Maps) -->
-            <div class="map-container glass-card mt-6 reveal delay-1" style="height: 400px; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); border-radius: 1rem; overflow: hidden; position: relative;">
-                <div style="text-align: center; z-index: 1;">
-                    <i data-lucide="map" style="width: 48px; height: 48px; color: var(--text-secondary); margin-bottom: 1rem;"></i>
-                    <p class="text-secondary">Mapa de Localização (Google Maps Iframe)</p>
-                </div>
-                <!-- Exemplo de como ficaria com imagem:
-                <img src="URL_DO_MAPA" style="position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; opacity: 0.5;">
-                -->
+            <!-- Mapa de Localização (Pinheiros, SP) -->
+            <div class="map-container glass-card mt-6 reveal delay-1" style="height: 380px; border-radius: 1rem; overflow: hidden; border: 1px solid var(--glass-border);">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.19777977464!2d-46.70119852375836!3d-23.561338878800165!2m3!1f0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5707b0ebbd75%3A0x643194a3f124659f!2sR.%20Paes%20Leme%2C%20215%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005424-150!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -140,7 +150,12 @@
                 <div class="logo">
                     <span class="logo-text">ALVANT</span>
                 </div>
-                <p>Engenharia, Inovação e Resultados. Construindo o futuro da tecnologia corporativa.</p>
+                <p><strong>ALVANT TECNOLOGIA DESENVOLVIMENTO DE SOFTWARE SOB ENCOMENDA LTDA</strong></p>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    CNPJ: 68.635.495/0001-69<br>
+                    Rua Pais Leme, 215, Conj. 1713 - Pinheiros<br>
+                    São Paulo/SP - CEP 05424-150
+                </p>
             </div>
             <div class="footer-links">
                 <h4>Navegação</h4>
@@ -151,16 +166,15 @@
                 <a href="contato.html">Contato</a>
             </div>
             <div class="footer-social">
-                <h4>Redes Sociais</h4>
-                <div class="social-icons">
-                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
-                </div>
+                <h4>Nossas Soluções</h4>
+                <a href="operix.html">Operix CMMS</a>
+                <a href="zeppe.html">Zeppe Acesso</a>
+                <a href="logmap.html">Logmap Roteirização</a>
+                <a href="https://www.logmap.com.br" target="_blank" style="color: var(--accent-cyan);">www.logmap.com.br</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Alvant Holding. Todos os direitos reservados.</p>
+            <p>&copy; <span id="year"></span> Alvant Tecnologia Ltda (CNPJ 68.635.495/0001-69). Todos os direitos reservados.</p>
         </div>
     </footer>
 

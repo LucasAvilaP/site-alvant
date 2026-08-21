@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logmap - Roteirização e Logística Inteligente | Alvant Tecnologia</title>
+    <meta name="description" content="Plataforma de otimização de rotas, gestão de frota e inteligência logística da Alvant Tecnologia. Acelere suas entregas e reduza custos operacionais.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header" class="scrolled">
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Alvant Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="logo-text" style="display:none;">ALVANT</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Voltar para Produtos</a>
+                <a href="https://www.logmap.com.br" target="_blank" class="btn-primary-sm">Acessar Logmap.com.br <i data-lucide="external-link" class="icon-sm"></i></a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Voltar para Produtos</a>
+            <a href="https://www.logmap.com.br" target="_blank" class="btn-primary-sm">Acessar Logmap.com.br</a>
+        </div>
+    </header>
+
+    <!-- App Hero Section -->
+    <section class="section-padding" style="padding-top: 10rem; background: radial-gradient(circle at top, rgba(0, 240, 255, 0.12) 0%, var(--bg-main) 70%);">
+        <div class="container text-center reveal">
+            <h1 class="page-title" style="font-size: 4rem;"><span class="text-gradient">Logmap</span></h1>
+            <p class="section-subtitle-center" style="font-size: 1.25rem; max-width: 850px;">
+                A plataforma <strong>All-in-One</strong> que conecta a sua operação do <strong>Orçamento ao Financeiro e Entregas</strong>. Gerencie vendas, analise faturamento diário e otimize suas rotas em um único ecossistema inteligente.
+            </p>
+            
+            <div class="hero-actions text-center" style="justify-content: center; margin-bottom: 3rem;">
+                <a href="https://www.logmap.com.br" target="_blank" class="btn btn-primary">Acessar Plataforma (logmap.com.br) <i data-lucide="external-link"></i></a>
+                <a href="#contato-logmap" class="btn btn-secondary">Solicitar Demonstração</a>
+            </div>
+
+            <!-- Dashboard Image Official -->
+            <div class="mt-6 mb-6">
+                <div class="glass-card" style="padding: 1.5rem; border-color: rgba(0, 240, 255, 0.3);">
+                    <img src="assets/images/logmap-app.png" alt="Painel de Gestão e Relatórios do Logmap" style="width: 100%; border-radius: 0.75rem; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid var(--glass-border); display: block;" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios e Funcionalidades -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="section-title">Gestão Completa de <span class="text-gradient">Ponta a Ponta</span></h2>
+                <p class="section-subtitle-center">Tudo o que sua empresa precisa para vender, faturar e entregar com máxima eficiência.</p>
+            </div>
+
+            <div class="cards-grid mb-6">
+                <div class="solucao-card glass-card reveal">
+                    <div class="card-icon"><i data-lucide="file-text"></i></div>
+                    <h3>Orçamentos & Pedidos</h3>
+                    <p>Gere orçamentos em segundos, gerencie condições de pagamento personalizadas, modalidades de observação e converta cotações em pedidos prontos para entrega.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-1">
+                    <div class="card-icon"><i data-lucide="trending-up"></i></div>
+                    <h3>Financeiro & Faturamento</h3>
+                    <p>Dashboards completos de evolução do faturamento diário, acompanhamento de valor médio por venda, taxas de conversão comercial e curva de clientes parceiros.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-2">
+                    <div class="card-icon"><i data-lucide="route"></i></div>
+                    <h3>Logística & Operações</h3>
+                    <p>Roteirização inteligente com Inteligência Artificial, catálogo de tarefas operacionais, acompanhamento de entregas e otimização sequencial de frota.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="solucao-card glass-card reveal">
+                    <div class="card-icon"><i data-lucide="users"></i></div>
+                    <h3>Gestão de Clientes & Categorias</h3>
+                    <p>Cadastre clientes, parceiros estratégicos e Organize seus produtos e serviços por categorias operacionais de forma simples e intuitiva.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-1">
+                    <div class="card-icon"><i data-lucide="pie-chart"></i></div>
+                    <h3>Relatórios e Análises Comerciais</h3>
+                    <p>Visualize em tempo real o desempenho da sua equipe de vendas, ticket médio de pedidos e métricas essenciais para a tomada de decisão.</p>
+                </div>
+                <div class="solucao-card glass-card reveal delay-2">
+                    <div class="card-icon"><i data-lucide="external-link"></i></div>
+                    <h3>Plataforma Web (logmap.com.br)</h3>
+                    <p>Software 100% em nuvem. Acesse o sistema de qualquer dispositivo em <strong>www.logmap.com.br</strong> com segurança e sincronização contínua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Específico -->
+    <section id="contato-logmap" class="contato section-padding">
+        <div class="container">
+            <div class="contato-wrapper glass-card reveal" style="max-width: 900px; margin: 0 auto; grid-template-columns: 1fr;">
+                <div class="contato-info text-center" style="padding: 3rem;">
+                    <h2>Otimize a Logística da sua <span class="text-gradient">Empresa</span></h2>
+                    <p>Solicite um contato dos nossos consultores para uma demonstração guiada do Logmap ou acesse direto em <strong><a href="https://www.logmap.com.br" target="_blank" style="color: var(--accent-cyan);">www.logmap.com.br</a></strong>.</p>
+                </div>
+                <div class="contato-form" style="padding: 3rem; background: transparent;">
+                    <form id="contactForm">
+                        <div class="form-group" style="display: none;">
+                            <input type="text" id="produto" value="Logmap Demo Request">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail Corporativo</label>
+                            <input type="email" id="email" placeholder="seu@empresa.com.br" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="empresa">Empresa e Tamanho da Frota</label>
+                            <input type="text" id="empresa" placeholder="Ex: Transportadora X - 15 veículos" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Falar com Consultor Logmap <i data-lucide="send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-text">ALVANT</span>
+                </div>
+                <p><strong>ALVANT TECNOLOGIA DESENVOLVIMENTO DE SOFTWARE SOB ENCOMENDA LTDA</strong></p>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                    CNPJ: 68.635.495/0001-69<br>
+                    Rua Pais Leme, 215, Conj. 1713 - Pinheiros<br>
+                    São Paulo/SP - CEP 05424-150
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="index.html">Início</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="produtos.html">Produtos e Soluções</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-social">
+                <h4>Nossas Soluções</h4>
+                <a href="operix.html">Operix CMMS</a>
+                <a href="zeppe.html">Zeppe Acesso</a>
+                <a href="logmap.html">Logmap Roteirização</a>
+                <a href="https://www.logmap.com.br" target="_blank" style="color: var(--accent-cyan);">www.logmap.com.br</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Alvant Tecnologia Ltda (CNPJ 68.635.495/0001-69). Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
