@@ -1,0 +1,6 @@
+# Robots.txt oficial da Alvant Tecnologia (https://alvant.com.br)
+User-agent: *
+Allow: /
+
+# Sitemap oficial
+Sitemap: https://alvant.com.br/sitemap.xml
