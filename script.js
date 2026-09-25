@@ -120,72 +120,79 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-// Draggable WhatsApp Floating Button (Mouse & Touch)
+// Draggable WhatsApp Floating Button using Modern Pointer Events (Prevents Draglock)
 const waBtn = document.getElementById('whatsapp-float');
 if (waBtn) {
     let isDragging = false;
-    let hasMoved = false;
-    let startX, startY, initialLeft, initialTop;
+    let dragMoved = false;
+    let startX = 0, startY = 0;
+    let initialLeft = 0, initialTop = 0;
 
-    const onStart = (e) => {
+    // Desativa o drag de imagem nativo do link pelo navegador
+    waBtn.addEventListener('dragstart', (e) => e.preventDefault());
+
+    waBtn.addEventListener('pointerdown', (e) => {
         isDragging = true;
-        hasMoved = false;
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        dragMoved = false;
+        
+        try {
+            waBtn.setPointerCapture(e.pointerId);
+        } catch (err) {}
         
         const rect = waBtn.getBoundingClientRect();
-        startX = clientX;
-        startY = clientY;
+        startX = e.clientX;
+        startY = e.clientY;
         initialLeft = rect.left;
         initialTop = rect.top;
         
         waBtn.style.transition = 'none';
-    };
+    });
 
-    const onMove = (e) => {
+    waBtn.addEventListener('pointermove', (e) => {
         if (!isDragging) return;
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
         
-        const deltaX = clientX - startX;
-        const deltaY = clientY - startY;
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
 
-        if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
-            hasMoved = true;
+        if (Math.hypot(deltaX, deltaY) > 6) {
+            dragMoved = true;
         }
 
-        let newLeft = initialLeft + deltaX;
-        let newTop = initialTop + deltaY;
+        if (dragMoved) {
+            let newLeft = initialLeft + deltaX;
+            let newTop = initialTop + deltaY;
 
-        const maxLeft = window.innerWidth - waBtn.offsetWidth - 10;
-        const maxTop = window.innerHeight - waBtn.offsetHeight - 10;
-        
-        newLeft = Math.max(10, Math.min(newLeft, maxLeft));
-        newTop = Math.max(10, Math.min(newTop, maxTop));
+            const maxLeft = window.innerWidth - waBtn.offsetWidth - 10;
+            const maxTop = window.innerHeight - waBtn.offsetHeight - 10;
+            
+            newLeft = Math.max(10, Math.min(newLeft, maxLeft));
+            newTop = Math.max(10, Math.min(newTop, maxTop));
 
-        waBtn.style.left = `${newLeft}px`;
-        waBtn.style.top = `${newTop}px`;
-        waBtn.style.bottom = 'auto';
-        waBtn.style.right = 'auto';
+            waBtn.style.left = `${newLeft}px`;
+            waBtn.style.top = `${newTop}px`;
+            waBtn.style.bottom = 'auto';
+            waBtn.style.right = 'auto';
+        }
+    });
+
+    const releasePointer = (e) => {
+        if (isDragging) {
+            isDragging = false;
+            try {
+                waBtn.releasePointerCapture(e.pointerId);
+            } catch (err) {}
+            waBtn.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+        }
     };
 
-    const onEnd = () => {
-        if (!isDragging) return;
-        isDragging = false;
-        waBtn.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
-    };
-
-    waBtn.addEventListener('mousedown', onStart);
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mouseup', onEnd);
-
-    waBtn.addEventListener('touchstart', onStart, { passive: true });
-    window.addEventListener('touchmove', onMove, { passive: false });
-    window.addEventListener('touchend', onEnd);
+    waBtn.addEventListener('pointerup', releasePointer);
+    waBtn.addEventListener('pointercancel', releasePointer);
 
     waBtn.addEventListener('click', (e) => {
-        if (hasMoved) {
+        if (dragMoved) {
             e.preventDefault();
+            e.stopPropagation();
+            dragMoved = false;
         }
     });
 }
