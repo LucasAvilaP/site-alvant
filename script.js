@@ -18,22 +18,26 @@ window.addEventListener('scroll', () => {
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileNav = document.getElementById('mobile-nav');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileNav.classList.toggle('active');
-    const icon = mobileNav.classList.contains('active') ? 'x' : 'menu';
-    mobileMenuBtn.innerHTML = `<i data-lucide="${icon}"></i>`;
-    lucide.createIcons();
-});
-
-// Close mobile menu when clicking a link
-const mobileLinks = mobileNav.querySelectorAll('a');
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        mobileMenuBtn.innerHTML = `<i data-lucide="menu"></i>`;
+if (mobileMenuBtn && mobileNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+        const isActive = mobileNav.classList.toggle('active');
+        document.body.style.overflow = isActive ? 'hidden' : 'auto';
+        const icon = isActive ? 'x' : 'menu';
+        mobileMenuBtn.innerHTML = `<i data-lucide="${icon}"></i>`;
         lucide.createIcons();
     });
-});
+
+    // Close mobile menu when clicking a link
+    const mobileLinks = mobileNav.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            mobileMenuBtn.innerHTML = `<i data-lucide="menu"></i>`;
+            lucide.createIcons();
+        });
+    });
+}
 
 // Scroll Reveal Animation
 function reveal() {
