@@ -500,18 +500,25 @@ header.scrolled {
     align-items: center;
 }
 
+.empresa-visual {
+    position: relative;
+}
+
 .image-wrapper {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
+    width: 100%;
 }
 
 .empresa-img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
     display: block;
     border-radius: 1rem;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: var(--transition-normal);
 }
 
@@ -522,21 +529,23 @@ header.scrolled {
 
 .experience-badge {
     position: absolute;
-    bottom: -2rem;
-    right: -2rem;
-    background: var(--bg-secondary);
-    padding: 1.5rem;
+    bottom: -1rem;
+    right: 1rem;
+    background: rgba(11, 17, 33, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 1.25rem 1.5rem;
     border-radius: 1rem;
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    z-index: 10;
 }
 
 .experience-badge .number {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 800;
     color: var(--accent-cyan);
     font-family: var(--font-heading);
@@ -544,12 +553,13 @@ header.scrolled {
 }
 
 .experience-badge .text {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--text-secondary);
+    color: #FFFFFF;
+    font-weight: 600;
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 0.35rem;
 }
 
 .features-list {
