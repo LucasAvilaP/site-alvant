@@ -119,3 +119,73 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+// Draggable WhatsApp Floating Button (Mouse & Touch)
+const waBtn = document.getElementById('whatsapp-float');
+if (waBtn) {
+    let isDragging = false;
+    let hasMoved = false;
+    let startX, startY, initialLeft, initialTop;
+
+    const onStart = (e) => {
+        isDragging = true;
+        hasMoved = false;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        
+        const rect = waBtn.getBoundingClientRect();
+        startX = clientX;
+        startY = clientY;
+        initialLeft = rect.left;
+        initialTop = rect.top;
+        
+        waBtn.style.transition = 'none';
+    };
+
+    const onMove = (e) => {
+        if (!isDragging) return;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        
+        const deltaX = clientX - startX;
+        const deltaY = clientY - startY;
+
+        if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+            hasMoved = true;
+        }
+
+        let newLeft = initialLeft + deltaX;
+        let newTop = initialTop + deltaY;
+
+        const maxLeft = window.innerWidth - waBtn.offsetWidth - 10;
+        const maxTop = window.innerHeight - waBtn.offsetHeight - 10;
+        
+        newLeft = Math.max(10, Math.min(newLeft, maxLeft));
+        newTop = Math.max(10, Math.min(newTop, maxTop));
+
+        waBtn.style.left = `${newLeft}px`;
+        waBtn.style.top = `${newTop}px`;
+        waBtn.style.bottom = 'auto';
+        waBtn.style.right = 'auto';
+    };
+
+    const onEnd = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        waBtn.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+    };
+
+    waBtn.addEventListener('mousedown', onStart);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onEnd);
+
+    waBtn.addEventListener('touchstart', onStart, { passive: true });
+    window.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('touchend', onEnd);
+
+    waBtn.addEventListener('click', (e) => {
+        if (hasMoved) {
+            e.preventDefault();
+        }
+    });
+}
