@@ -119,3 +119,79 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+// Draggable WhatsApp Floating Button using Modern Pointer Events (Prevents Draglock)
+const waBtn = document.getElementById('whatsapp-float');
+if (waBtn) {
+    let isDragging = false;
+    let dragMoved = false;
+    let startX = 0, startY = 0;
+    let initialLeft = 0, initialTop = 0;
+
+    waBtn.addEventListener('dragstart', (e) => e.preventDefault());
+
+    waBtn.addEventListener('pointerdown', (e) => {
+        isDragging = true;
+        dragMoved = false;
+        
+        try {
+            waBtn.setPointerCapture(e.pointerId);
+        } catch (err) {}
+        
+        const rect = waBtn.getBoundingClientRect();
+        startX = e.clientX;
+        startY = e.clientY;
+        initialLeft = rect.left;
+        initialTop = rect.top;
+        
+        waBtn.style.transition = 'none';
+    });
+
+    waBtn.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
+
+        if (Math.hypot(deltaX, deltaY) > 6) {
+            dragMoved = true;
+        }
+
+        if (dragMoved) {
+            let newLeft = initialLeft + deltaX;
+            let newTop = initialTop + deltaY;
+
+            const maxLeft = window.innerWidth - waBtn.offsetWidth - 10;
+            const maxTop = window.innerHeight - waBtn.offsetHeight - 10;
+            
+            newLeft = Math.max(10, Math.min(newLeft, maxLeft));
+            newTop = Math.max(10, Math.min(newTop, maxTop));
+
+            waBtn.style.left = `${newLeft}px`;
+            waBtn.style.top = `${newTop}px`;
+            waBtn.style.bottom = 'auto';
+            waBtn.style.right = 'auto';
+        }
+    });
+
+    const releasePointer = (e) => {
+        if (isDragging) {
+            isDragging = false;
+            try {
+                waBtn.releasePointerCapture(e.pointerId);
+            } catch (err) {}
+            waBtn.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+        }
+    };
+
+    waBtn.addEventListener('pointerup', releasePointer);
+    waBtn.addEventListener('pointercancel', releasePointer);
+
+    waBtn.addEventListener('click', (e) => {
+        if (dragMoved) {
+            e.preventDefault();
+            e.stopPropagation();
+            dragMoved = false;
+        }
+    });
+}
